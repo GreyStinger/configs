@@ -1,7 +1,7 @@
 # Autostart
 kitty &
-bash ~/configs/setxrandr.sh &
-bash ~/configs/setbg.sh &
+bash ~/configs/scripts/setxrandr.sh &
+bash ~/configs/scripts/setbg.sh &
 
 picom &
 
