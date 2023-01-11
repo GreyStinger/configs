@@ -1,0 +1,22 @@
+# From Repo
+dwm
+dmenu
+
+# From Arch/AUR
+rustup
+make
+patch
+clang
+xorg-server
+xorg-xinit
+libx11
+libxinerama
+libxft
+webkit2gtk
+terminus-font-ttf
+ttf-material-design-icons
+picom-ibhagwan-git
+firefox
+neofetch
+visual-studio-code-bin
+

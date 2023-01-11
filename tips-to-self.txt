@@ -1,0 +1,8 @@
+# Config Management
+Only run make distribute on new machine otherwise edit configs
+in their respective spots to avoid confusion
+
+# Display Management
+Gtf will give you the correct modeline e.g. `gtf 1600 900 60` gives
+`"1600x900_60.00"  119.00  1600 1696 1864 2128  900 901 904 932  -HSync +Vsync`
+Setting resolution in xrandr script run command xrandr to get adapter name

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="file:///home/grey/configs/firefox/favicon.ico"
+        />
+        <title>Greys Home</title>
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+            html,
+            body {
+                height: 100vh;
+                max-height: 100vh;
+                margin: 0px;
+                padding: 0px;
+            }
+
+            h1 {
+                margin: 0px;
+            }
+
+            .bg-image {
+                background-image: url("file:///home/grey/configs/firefox/ffbg.jpg");
+                height: 100%;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            .search-container {
+                font-family: Terminus, monospace;
+                position: absolute;
+                top: 50vh;
+                width: 20vw;
+                margin-left: 4vw;
+            }
+
+            .search-label {
+                font-size: 1.4rem;
+                color: white;
+                font-weight: 700;
+            }
+
+            .search-box {
+                font-family: Terminus, monospace;
+                font-size: 1rem;
+                font-weight: 600;
+                height: 2.2rem;
+                padding: 0.2rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                margin-top: 0.6rem;
+                border: none;
+                border-radius: 6px;
+                text-decoration: none;
+                outline: none;
+                width: 100%;
+                background-color: aliceblue;
+                caret-color: transparent;
+            }
+
+            .main-quote {
+                position: absolute;
+                top: 20vh;
+                margin-left: 4vw;
+            }
+
+            .main-quote h1 {
+                font-size: 3rem;
+                font-family: "Righteous", cursive;
+                color: white;
+                font-weight: 400;
+            }
+
+            .clock {
+                position: absolute;
+                top: 24vh;
+                left: 84vw;
+                transform: translateX(-50%) translateY(-50%);
+                color: white;
+                font-size: 3rem;
+                font-weight: 400;
+                font-family: "Righteous", cursive;
+                letter-spacing: 7px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bg-image">
+            <div class="main-quote">
+                <h1>Memenoto Mori</h1>
+            </div>
+            <div class="search-container">
+                <label class="search-label">
+                    Google Search:
+                    <input
+                        autofocus
+                        id="searchBar"
+                        type="search"
+                        class="search-box"
+                        placeholder="🔎 Search"
+                    />
+                </label>
+            </div>
+            <div id="clockDisplay" class="clock"></div>
+        </div>
+        <script>
+            // Redirect to google with query
+            function searchGoogle() {
+                const query = document
+                    .getElementById("searchBar")
+                    .value.replace(/ /g, "+");
+                window.location.href = `https://www.google.com/search?q=${query}`;
+            }
+
+            // Search bar enter press
+            document
+                .getElementById("searchBar")
+                .addEventListener("keyup", (e) => {
+                    if (e.keyCode != 13) return;
+                    searchGoogle();
+                });
+
+            // Global event listener for focusing on search bar
+            document.body.addEventListener(
+                "click",
+                () => document.getElementById("searchBar").focus(),
+                true
+            );
+
+            // Function to calculate and show clock
+            function showTime() {
+                var date = new Date();
+                var h = date.getHours(); // 0 - 23
+                var m = date.getMinutes(); // 0 - 59
+                var s = date.getSeconds(); // 0 - 59
+                var session = "AM";
+
+                if (h == 0) {
+                    h = 12;
+                }
+
+                if (h > 12) {
+                    h = h - 12;
+                    session = "PM";
+                }
+
+                h = h < 10 ? "0" + h : h;
+                m = m < 10 ? "0" + m : m;
+                s = s < 10 ? "0" + s : s;
+
+                var time = h + ":" + m + ":" + s + " " + session;
+                document.getElementById("clockDisplay").innerText = time;
+                document.getElementById("clockDisplay").textContent = time;
+
+                setTimeout(showTime, 1000);
+            }
+
+            // Run initially
+            showTime();
+        </script>
+    </body>
+</html>
