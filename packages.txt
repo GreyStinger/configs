@@ -16,6 +16,9 @@ libxft
 webkit2gtk
 firefox
 neofetch
+neovim
+feh
+kitty
 
 # From AUR
 visual-studio-code-bin
