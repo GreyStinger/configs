@@ -14,7 +14,7 @@ libxinerama
 libxft
 webkit2gtk
 terminus-font-ttf
-ttf-material-design-icons
+ttf-material-design-icons-desktop-git
 picom-ibhagwan-git
 firefox
 neofetch
