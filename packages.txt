@@ -2,7 +2,8 @@
 dwm
 dmenu
 
-# From Arch/AUR
+# From Arch
+fakeroot
 rustup
 make
 patch
@@ -13,10 +14,11 @@ libx11
 libxinerama
 libxft
 webkit2gtk
+firefox
+neofetch
+
+# From AUR
+visual-studio-code-bin
 terminus-font-ttf
 ttf-material-design-icons-desktop-git
 picom-ibhagwan-git
-firefox
-neofetch
-visual-studio-code-bin
-
