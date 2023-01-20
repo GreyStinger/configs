@@ -4,7 +4,7 @@ dmenu
 
 # From Arch
 fakeroot
-rustup
+cargo
 make
 patch
 clang
@@ -16,6 +16,7 @@ libxft
 webkit2gtk
 firefox
 neofetch
+pkg-config
 neovim
 feh
 htop
