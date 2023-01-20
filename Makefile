@@ -6,6 +6,8 @@ aggregate:
 	cp ~/.config/kitty/kitty.conf ~/configs/kitty/kitty.conf
 	# xinit
 	cp ~/.xinitrc ~/configs/.xinitrc
+	# fish
+	cp ~/.config/fish/config.fish ~/configs/fish/config.fish
 
 # Only run distribute on initial set
 distribute:
@@ -21,5 +23,9 @@ distribute:
 	# X11
 	sudo mkdir -p /etc/X11/xorg.conf.d
 	sudo cp ~/configs/X11/touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf
+	# fish
+	sudo mkdir -p ~/.config/fish/
+	cp ~/configs/fish/config.fish ~/.config/fish/config.fish
 
 .PHONY: aggregate distribute
+

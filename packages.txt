@@ -18,10 +18,22 @@ firefox
 neofetch
 neovim
 feh
+htop
 kitty
+telegram-desktop
+upx
+alsa-utils
+alsa-plugins
 
 # From AUR
 visual-studio-code-bin
+slack-desktop
+discord-canary
 terminus-font-ttf
 ttf-material-design-icons-desktop-git
 picom-ibhagwan-git
+whatsapp-for-linux
+zoom
+noisetorch
+xdotool
+
