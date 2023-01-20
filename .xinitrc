@@ -2,6 +2,7 @@
 kitty &
 bash ~/configs/scripts/setxrandr.sh &
 bash ~/configs/scripts/setbg.sh &
+bash ~/configs/scripts/setmultimon.sh &
 
 picom &
 
